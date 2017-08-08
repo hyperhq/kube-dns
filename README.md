@@ -33,6 +33,15 @@ This is the repository for [Kubernetes DNS](http://kubernetes.io/docs/admin/dns/
 
 [![Analytics](https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/dns/README.md?pixel)]()
 
+```sh
+git clone https://github.com/hyperhq/kube-dns.git $GOPATH/src/k8s.io/dns
+cd $GOPATH/src/k8s.io/dns
+make build
+
+make containers REGISTRY=stackube VERSION=1.14.4
+make push REGISTRY=stackube VERSION=1.14.4
+```
+
 ## Release process
 
 1. Build and test (`make build` and `make test`)
